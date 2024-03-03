@@ -1,0 +1,16 @@
+Sigil Knight Commander
+"The Order of Solan will be a lodestone for justice."
+You are a noble knight fighting for a noble cause. You wield The Solan's sword with enough strength to kill anyone who might challenge you.
+Strengths: your high damage can shred low hp enemies, you are also tanky making it hard for people to kill you.
+Weaknessess: basic mobility makes it harder for you to dodge abilities and you may have trouble hitting fast classes.
+Abyss Walker
+"Continue Fighting the forces of Solan in order to bring freedom to all."
+You are a dark warlord, trained to defeat Solan's soldiers. You wield The Abyssal Greatsword with dark forces that curse your enemies.
+Strengths: you deal the most damage out of everyone and you also may also curse your enemies to deal extra damage, you are pretty tanky.
+Weaknesses: you practically have no mobility, you have a small moveset and you cant use magic (this does not include your mana shield).
+Master Necromancer
+"The Cycle of Life and Death is halted by fools."
+A mage gone mad, you use dark magic to fight your enemies. You spawn in shriekers to fight for you in battle, who may curse your enemies.
+Strengths: your abilities when combo'd can be deadly dealing immense damage, you are hard to approach by enemies with low mobility.
+Weaknesses: you aren't that tanky, you are limited by your shriekers.
+Master Illusionist

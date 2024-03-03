@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1709496919 source:c:\users\lukas\documents\github\schizoprojects\rogue\main.cpp
+	<iostream>
+	<string>
+	<fstream>
+
