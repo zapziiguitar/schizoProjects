@@ -277,6 +277,7 @@ cout << R"(
                 player1[2]--;
                 break;
             case 6:
+                player2[3]++;
                 break;
             case 7:
                 silver1 = false;
@@ -291,7 +292,7 @@ cout << R"(
         cout << p1class << " max HP: " << maxhp1 << endl;
         cout << p1class << " current HP: " << player1[0] << endl;
         cout << "POTION TOXICITY: " << toxicity1 << endl;
-        cout << "SPECIAL COOLDOWN: " << spcd1 << endl;
+        cout << "SPECIAL COOLDOWN: " << spcd1 << " turns." << endl;
         cout << "ATTACK            HEAL            SPECIAL" << endl;
         cin >> p1move;
         if(p1move == "ATTACK")
@@ -426,7 +427,7 @@ cout << R"(
                     break;
                 case 4:
                     player1[2]++;
-                    cout << "You envelop your opponent in your grappling hook, as they struggle to move you may now land free hits on them. Your opponent cannot hit you." << endl;
+                    cout << "You drive your opponent insane, their footworks getting slobbish and they're having a harder time hitting you. Your speed has gone up." << endl;
                     spturns1 = -1;
                     spcd1 = 3;
                     cin.ignore();
@@ -434,9 +435,9 @@ cout << R"(
                     break;
                 case 5:
                     player1[2]++;
-                    cout << "You drive your opponent insane, their footworks getting slobbish and they're having a harder time hitting you. Your speed has gone up." << endl;
+                    cout << "You envelop your opponent in your grappling hook, as they struggle to move you may now land free hits on them. Your opponent cannot hit you." << endl;
                     spturns1 = -1;
-                    spcd1 = 3;
+                    spcd1 = 5;
                     cin.ignore();
                     sleep(3);
                     break;
@@ -500,6 +501,7 @@ cout << R"(
                 player2[2]--;
                 break;
             case 6:
+                player2[3]++;
                 break;
             case 7:
                 silver1 = false;
@@ -515,7 +517,7 @@ cout << R"(
         cout << p2class << " max HP: " << maxhp2 << endl;
         cout << p2class << " current HP: " << player2[0] << endl;
         cout << "POTION TOXICITY: " << toxicity2 << endl;
-        cout << "SPECIAL COOLDOWN: " << spcd2 << endl;
+        cout << "SPECIAL COOLDOWN: " << spcd2 << " turns." << endl;
         cout << "ATTACK            HEAL            SPECIAL" << endl;
         cin >> p2move;
         if(p2move == "ATTACK")
@@ -650,7 +652,7 @@ cout << R"(
                     break;
                 case 4:
                     player2[2]++;
-                    cout << "You envelop your opponent in your grappling hook, as they struggle to move you may now land free hits on them. Your opponent cannot hit you." << endl;
+                    cout << "You drive your opponent insane, their footworks getting slobbish and they're having a harder time hitting you. Your speed has gone up." << endl;
                     spturns2 = -1;
                     spcd2 = 3;
                     cin.ignore();
@@ -658,9 +660,9 @@ cout << R"(
                     break;
                 case 5:
                     player2[2]++;
-                    cout << "You drive your opponent insane, their footworks getting slobbish and they're having a harder time hitting you. Your speed has gone up." << endl;
+                    cout << "You envelop your opponent in your grappling hook, as they struggle to move you may now land free hits on them. Your opponent cannot hit you." << endl;
                     spturns2 = -1;
-                    spcd2 = 3;
+                    spcd2 = 5;
                     cin.ignore();
                     sleep(3);
                     break;
