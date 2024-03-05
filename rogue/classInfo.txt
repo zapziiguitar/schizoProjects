@@ -1,16 +1,48 @@
 Sigil Knight Commander
 "The Order of Solan will be a lodestone for justice."
 You are a noble knight fighting for a noble cause. You wield The Solan's sword with enough strength to kill anyone who might challenge you.
-Strengths: your high damage can shred low hp enemies, you are also tanky making it hard for people to kill you.
-Weaknessess: basic mobility makes it harder for you to dodge abilities and you may have trouble hitting fast classes.
+Special ability: White Flame Charge
+Strengths: high dmg, tanky.
+Weaknessess: no mobility.
 Abyss Walker
 "Continue Fighting the forces of Solan in order to bring freedom to all."
 You are a dark warlord, trained to defeat Solan's soldiers. You wield The Abyssal Greatsword with dark forces that curse your enemies.
-Strengths: you deal the most damage out of everyone and you also may also curse your enemies to deal extra damage, you are pretty tanky.
-Weaknesses: you practically have no mobility, you have a small moveset and you cant use magic (this does not include your mana shield).
+Special ability: Wrathful Leap.
+Strengths: huge damage, tanky.
+Weaknesses: no mobility.
 Master Necromancer
 "The Cycle of Life and Death is halted by fools."
 A mage gone mad, you use dark magic to fight your enemies. You spawn in shriekers to fight for you in battle, who may curse your enemies.
-Strengths: your abilities when combo'd can be deadly dealing immense damage, you are hard to approach by enemies with low mobility.
-Weaknesses: you aren't that tanky, you are limited by your shriekers.
+Special ability: Bound Shriekers.
+Strengths: huge regen.
+Weaknesses: immobile, mediocre damage.
 Master Illusionist
+"Perhaps your mind is too strong for my Illusions..."
+A noble mage with an ability to make anyone go insane. Yup, that makes sense.
+Special ability: Dominus (ability to make people go insane).
+Strengths: huge regen.
+Weaknesses: immobile, mediocre damage.
+Shinobi
+"Sharp eyes - sharper blades."
+One who is not scared to rip their own arm off, it proves that you dont hesitate to let something go that stands in the way of getting what you want.
+Special ability: Grapple.
+Strengths: HUGE MOBILITY.
+Weaknesses: quite squishy, lackluster damage.
+Faceless One
+"Discard your identity and possessions."
+"Who are you?" is what your trainer asked you after you've trained under his wing. You are a force to reckoned with, no one should take you lightly, afterall no one had the courage to question your why you gave up everything. ...edgelord
+Special Ability: Ethereal Strike
+Strengths: very agile and mobile.
+Weaknesses: squishy.
+Whisperer
+"Go forth, my child."
+The one who you trained loves you, afterall you call her your mother (not actually biological (no you weirdo not a mommy kind)). Your trainer is one who went through a lot to get here. Her past is a secret to all, as she was a Faceless. The feats she went went through to eventually train you, a great Whisperer!
+Special Ability: Silverguard.
+Strengths: none.
+Weaknesses: none.
+Ronin
+"...Hm."
+Probably the chillest person ever. They aren't even in a faction! But this neutral swordsman is more than a great buddy. They have no intention of fighting you but don't make a mistake they will if they have to. Some say Ronins have the best swordsmanship in all of Gaia.
+Special Ability: Calm Mind.
+Strengths: none.
+Weaknesses: none.

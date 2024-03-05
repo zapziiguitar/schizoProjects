@@ -1,6 +1,13 @@
 # depslib dependency file v1.0
-1709496919 source:c:\users\lukas\documents\github\schizoprojects\rogue\main.cpp
+1709616838 source:c:\users\lukas\documents\github\schizoprojects\rogue\main.cpp
 	<iostream>
 	<string>
 	<fstream>
+	<unistd.h>
+	<vector>
+	<Windows.h>
+	<mmsystem.h>
+	<cstdlib>
+	<ctime>
+	<limits>
 
