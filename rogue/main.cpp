@@ -707,7 +707,7 @@ cout << R"(
         if(faction1 == "chaotic") cout << p1class << " has at last fallen. No more will they terrorise Gaia. May peace live on." << endl;
         if(faction1 == "neutral") cout << "Is this... peace..?" << endl;
     }
-    if(player2[0] < 0);
+    if(player2[0] > 0)
     {
         if(faction1 == "orderly") cout << "The Great " << p1class << " has saved Gaia once again from the likes of " << p2class << ". May news of this Hero spread all over these beautiful lands." << endl;
         if(faction1 == "chaotic") cout << "Stronger and more bloodthirsty than ever " << p1class << " is looking for another fight to finally bring all of Gaia to their KNEES!" << endl;
