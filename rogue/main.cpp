@@ -14,6 +14,7 @@ string assignFaction(string chosenClass)
 {
     string uclass, assignedFaction;
     ifstream faction("classFactions.txt");
+    faction.seekg(0, ios_base::beg);
     while(getline(faction, uclass))
     {
         if(chosenClass == uclass)
@@ -29,6 +30,7 @@ int assignSpecial(string chosenClass)
     string uclass;
     int num = 0;
     ifstream numerical("numerical.txt");
+    numerical.seekg(0, ios_base::beg);
 
     while(getline(numerical, uclass))
     {
@@ -44,7 +46,7 @@ vector<int> assignStats(vector<int> player, string chosenClass)
 {
     string uclass;
     ifstream stats("classStats.txt");
-
+    stats.seekg(0, ios_base::beg);
     while(getline(stats, uclass))
     {
         if(chosenClass == uclass )
@@ -133,14 +135,13 @@ int main()
         cout << endl;
         cout << "Would you like to lock in your choice? Y/N." << endl;
         cin >> answer;
-        cin.ignore();
     }
     answer = 'N';
     p1class = tempclass;
     cout << endl;
     cout << "Player 1 has chosen: " << p1class << endl;
+    cin.ignore();
     system("cls");
-
     cout << "Class list:" << endl;
     cout << "Sigil Knight Commander" << endl;
     cout << "Abyss Walker" << endl;
@@ -151,7 +152,7 @@ int main()
     cout << "Whisperer" << endl;
     cout << "Ronin" << endl;
     cout << endl;
-
+    classes.seekg(0, ios_base::beg);
     while(answer == 'N')
     {
         cout << "Player 2, please choose your class: " << endl;
@@ -181,7 +182,6 @@ int main()
         cin >> answer;
         cin.ignore();
     }
-    answer = 'N';
     p2class = tempclass;
     cout << endl;
     cout << "Player 2 has chosen: " << p2class << endl;
@@ -338,6 +338,7 @@ cout << R"(
             if(dodge1)
             {
                 cout << "Your opponent has dodged the attack!" << endl;
+                dodge1=false;
                 cin.ignore();
                 sleep(3);
             }
@@ -383,7 +384,7 @@ cout << R"(
                 {
                     player1[0] = maxhp1;
                 }
-                cout << "The potion tasted like a cool beer and a pack of ciggarettes on a calm friday evening! You're now at " << player1[0] << "HP.";
+                cout << "The potion tasted like a cool beer and a pack of ciggarettes on a calm friday evening! You healed: " << potion << "HP." << endl;
                 toxicity1++;
                 cin.ignore();
                 sleep(3);
@@ -563,6 +564,7 @@ cout << R"(
             if(dodge2)
             {
                 cout << "Your opponent has dodged the attack!" << endl;
+                dodge2 = false;
                 cin.ignore();
                 sleep(3);
             }
@@ -603,12 +605,12 @@ cout << R"(
                     potion2=40;
                     break;
                 }
-                player2[0]+=potion;
+                player2[0]+=potion2;
                 if(player2[0] > maxhp2)
                 {
                     player2[0] = maxhp2;
                 }
-                cout << "The potion tasted like a cool beer and a pack of ciggarettes on a calm friday evening! You're now at " << player2[0] << "HP.";
+                cout << "The potion tasted like a cool beer and a pack of ciggarettes on a calm friday evening! You healed " << potion2 << "HP." << endl;
                 toxicity2++;
                 cin.ignore();
                 sleep(3);
