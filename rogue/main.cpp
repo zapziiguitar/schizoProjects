@@ -327,7 +327,6 @@ cout << R"(
                 dodgechance1 = rand() % 2 + 1;
                 break;
             case 4:
-                srand(time(0));
                 dodgechance1 = 1;
                 break;
             }
@@ -406,7 +405,7 @@ cout << R"(
                     player1[1]++;
                     cout << "As White Flames engulf your swords, you feel yourself get stronger. Your damage output is now higher." << endl;
                     spturns1 = -1;
-                    spcd1 = 3;
+                    spcd1 = 5;
                     cin.ignore();
                     sleep(3);
                     break;
@@ -414,7 +413,7 @@ cout << R"(
                     player1[1]++;
                     cout << "As you take a Wrathful Leap, you curse your opponent and watch as they feel obsolete. Your damage output is now higher." << endl;
                     spturns1 = -1;
-                    spcd1 = 3;
+                    spcd1 = 5;
                     cin.ignore();
                     sleep(3);
                     break;
@@ -422,7 +421,7 @@ cout << R"(
                     player1[2]++;
                     cout << "You cast a dark spell summoning the undead shriekers, once noble warriors and watch as your opponent struggles to get near you. Your speed has gone up." << endl;
                     spturns1 = -1;
-                    spcd1 = 3;
+                    spcd1 = 5;
                     cin.ignore();
                     sleep(3);
                     break;
@@ -430,7 +429,7 @@ cout << R"(
                     player1[2]++;
                     cout << "You drive your opponent insane, their footworks getting slobbish and they're having a harder time hitting you. Your speed has gone up." << endl;
                     spturns1 = -1;
-                    spcd1 = 3;
+                    spcd1 = 5;
                     cin.ignore();
                     sleep(3);
                     break;
@@ -446,7 +445,7 @@ cout << R"(
                     player2[3]--;
                     cout << "Your slash and stab your opponent multiple times, causing hemorrhaging. They take 60HP of damage and hinder their regenerating capabilities." << endl;
                     spturns1 = -1;
-                    spcd1 = 3;
+                    spcd1 = 5;
                     cin.ignore();
                     sleep(3);
                     break;
@@ -454,7 +453,7 @@ cout << R"(
                     silver1 = true;
                     cout << "You cover your armor in silver, rendering enemy damage obsolete. You take 50% less damage." << endl;
                     spturns1 = -1;
-                    spcd1 = 3;
+                    spcd1 = 5;
                     cin.ignore();
                     sleep(3);
                     break;
@@ -462,7 +461,7 @@ cout << R"(
                     player1[2]++;
                     cout << "The ronin calms his mind, grips his katana tighter, they feel at peace, ready to weave any ability. Your speed has gone up." << endl;
                     spturns1 = -1;
-                    spcd1 = 3;
+                    spcd1 = 5;
                     cin.ignore();
                     sleep(3);
                     break;
@@ -553,7 +552,6 @@ cout << R"(
                 dodgechance2 = rand() % 2 + 1;
                 break;
             case 4:
-                srand(time(0));
                 dodgechance2 = 1;
                 break;
             }
@@ -632,7 +630,7 @@ cout << R"(
                     player2[1]++;
                     cout << "As White Flames engulf your swords, you feel yourself get stronger. Your damage output is now higher." << endl;
                     spturns2 = -1;
-                    spcd2 = 3;
+                    spcd2 = 5;
                     cin.ignore();
                     sleep(3);
                     break;
@@ -640,7 +638,7 @@ cout << R"(
                     player2[1]++;
                     cout << "As you take a Wrathful Leap, you curse your opponent and watch as they feel obsolete. Your damage output is now higher." << endl;
                     spturns2 = -1;
-                    spcd2 = 3;
+                    spcd2 = 5;
                     cin.ignore();
                     sleep(3);
                     break;
@@ -648,7 +646,7 @@ cout << R"(
                     player2[2]++;
                     cout << "You cast a dark spell summoning the undead shriekers, once noble warriors and watch as your opponent struggles to get near you. Your speed has gone up." << endl;
                     spturns2 = -1;
-                    spcd2 = 3;
+                    spcd2 = 5;
                     cin.ignore();
                     sleep(3);
                     break;
@@ -656,7 +654,7 @@ cout << R"(
                     player2[2]++;
                     cout << "You drive your opponent insane, their footworks getting slobbish and they're having a harder time hitting you. Your speed has gone up." << endl;
                     spturns2 = -1;
-                    spcd2 = 3;
+                    spcd2 = 5;
                     cin.ignore();
                     sleep(3);
                     break;
@@ -672,7 +670,7 @@ cout << R"(
                     player1[3]--;
                     cout << "Your slash and stab your opponent multiple times, causing hemorrhaging. They take 60HP of damage and hinder their regenerating capabilities." << endl;
                     spturns2 = -1;
-                    spcd2 = 3;
+                    spcd2 = 5;
                     cin.ignore();
                     sleep(3);
                     break;
@@ -680,7 +678,7 @@ cout << R"(
                     silver2 = true;
                     cout << "You cover your armor in silver, rendering enemy damage obsolete. You take 50% less damage." << endl;
                     spturns2 = -1;
-                    spcd2 = 3;
+                    spcd2 = 5;
                     cin.ignore();
                     sleep(3);
                     break;
@@ -688,7 +686,7 @@ cout << R"(
                     player2[2]++;
                     cout << "The ronin calms his mind, grips his katana tighter, they feel at peace, ready to weave any ability. Your speed has gone up." << endl;
                     spturns2 = -1;
-                    spcd2 = 3;
+                    spcd2 = 5;
                     cin.ignore();
                     sleep(3);
                     break;
