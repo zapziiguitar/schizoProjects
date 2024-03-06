@@ -1,3 +1,2 @@
 # schizoProjects
-everythings perfect except for player2.
-if player2 dodges an attack once, they will always dodge the other ones.
+everythings perfect except for shinobi. i think it works for player1 tho.
