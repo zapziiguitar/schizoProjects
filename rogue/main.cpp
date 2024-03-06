@@ -66,7 +66,7 @@ int main()
 {
 
     srand(time(0));
-    int num = rand() % 4 + 1;
+    int num = rand() % 6 + 1;
     switch(num)
     {
     case 1:
@@ -81,6 +81,12 @@ int main()
     case 4:
         PlaySound(TEXT("viniferas menu.wav"),NULL,SND_FILENAME | SND_ASYNC | SND_LOOP);
         break;
+    case 5:
+        PlaySound(TEXT("sans.wav"),NULL,SND_FILENAME | SND_ASYNC | SND_LOOP);
+        break;
+    case 6:
+        PlaySound(TEXT("Harmony.wav"),NULL,SND_FILENAME | SND_ASYNC | SND_LOOP);
+        break;
     }
 
 
@@ -91,7 +97,7 @@ int main()
     vector<int> player1 = {0, 0, 0, 0};
     vector<int> player2 = {0, 0, 0 ,0};
 
-    bool silver1 = false, silver2 = false, special1 = false, special2 = false, miss1 = false, miss2 = false, dodge1 = false, dodge2 = false, grapple1 = false, grapple2 = false;
+    bool silver1 = false, silver2 = false, dodge1 = false, dodge2 = false, grapple1 = false, grapple2 = false;
     string tempclass, p1class, p2class, uclass, classQuote, classInfo, classStrengths, classWeaknesses, classSpecial, faction1, faction2, p1move, p2move;
     int sp1 = 0, sp2 = 0, toxicity1 = 0, toxicity2 = 0, dmg, maxhp1, maxhp2, spcd1 = 1, spcd2 = 1, dodgechance1, dodgechance2, spturns1 = 0, spturns2 = 2, potion, potion2;
 
@@ -110,7 +116,7 @@ int main()
 
     while(answer == 'N')
     {
-        cout << "Player 1, please choose your class: " << endl;
+        cout << "Player 1, please choose your class (case sensitive): " << endl;
         getline(cin,tempclass);
         while(getline(classes, uclass))
         {
@@ -155,7 +161,7 @@ int main()
     classes.seekg(0, ios_base::beg);
     while(answer == 'N')
     {
-        cout << "Player 2, please choose your class: " << endl;
+        cout << "Player 2, please choose your class(case sensitive): " << endl;
         getline(cin,tempclass);
         while(getline(classes, uclass))
         {
@@ -234,7 +240,7 @@ cout << R"(
     system("cls");
 
     srand(time(0));
-    int num2 = rand() % 3 + 1;
+    int num2 = rand() % 9 + 1;
     switch(num2)
     {
     case 1:
@@ -245,6 +251,24 @@ cout << R"(
         break;
     case 3:
         PlaySound(TEXT("sky castle combat.wav"),NULL,SND_FILENAME | SND_ASYNC | SND_LOOP);
+        break;
+    case 4:
+        PlaySound(TEXT("Dummy!.wav"),NULL,SND_FILENAME | SND_ASYNC | SND_LOOP);
+        break;
+    case 5:
+        PlaySound(TEXT("Rude Buster.wav"),NULL,SND_FILENAME | SND_ASYNC | SND_LOOP);
+        break;
+    case 6:
+        PlaySound(TEXT("ASGORE.wav"),NULL,SND_FILENAME | SND_ASYNC | SND_LOOP);
+        break;
+    case 7:
+        PlaySound(TEXT("Hopes And Dreams.wav"),NULL,SND_FILENAME | SND_ASYNC | SND_LOOP);
+        break;
+    case 8:
+        PlaySound(TEXT("Battle Against A True Hero.wav"),NULL,SND_FILENAME | SND_ASYNC | SND_LOOP);
+        break;
+    case 9:
+        PlaySound(TEXT("Last Surprise.wav"),NULL,SND_FILENAME | SND_ASYNC | SND_LOOP);
         break;
     }
     maxhp1 = player1[0];
@@ -262,32 +286,56 @@ cout << R"(
             switch(sp1)
             {
             case 1:
+                cout << "The White Flames, once on your sword, fade. Your damage output is back to normal." << endl;
+                cout << endl;
                 player1[1]--;
                 break;
             case 2:
+                cout << "The curse lifts off of your opponent. Your damage output is back to normal." << endl;
+                cout << endl;
                 player1[1]--;
                 break;
             case 3:
+                cout << "Your opponent fights off the shriekers and is able to focus on the battle at hand. Your opponent's agility is back to normal." << endl;
+                cout << endl;
                 player1[2]--;
                 break;
             case 4:
                 player1[2]--;
+                cout << "Your opponent comes to their senses and their thoughts are back to normal. Your opponent's agility is back to normal." << endl;
+                cout << endl;
                 break;
             case 5:
-                player1[2]--;
+                grapple1 = false;
+                cout << "Your opponent breaks out of the ropes and may fight again. Your opponent may no longer skip turns." << endl;
+                cout << endl;
                 break;
             case 6:
                 player2[3]++;
+                cout << "Your opponent stopped the bleeding. Your opponent may use potions to regain more health." << endl;
+                cout << endl;
                 break;
             case 7:
                 silver1 = false;
+                cout << "The silver vanishes from your armor. You take the same ammount of damage as you did." << endl;
+                cout << endl;
                 break;
             case 8:
                 player1[2]--;
+                cout << "You remember that you left the stove on! Your agility is back to normal." << endl;
+                cout << endl;
+                break;
             }
         }
         if(spcd1 < 0) spcd1 = 0;
         system("cls");
+        if(grapple2)
+        {
+            cout << "You're enveloped in the opponent's grapple! You skip this turn" << endl;
+            sleep(4);
+            system("cls");
+        }
+        else{
         cout << p1class << " makes their move!" << endl;
         cout << p1class << " max HP: " << maxhp1 << endl;
         cout << p1class << " current HP: " << player1[0] << endl;
@@ -295,6 +343,13 @@ cout << R"(
         cout << "SPECIAL COOLDOWN: " << spcd1 << " turns." << endl;
         cout << "ATTACK            HEAL            SPECIAL" << endl;
         cin >> p1move;
+        while(p1move != "ATTACK" || p1move != "HEAL" || p1move != "SPECIAL")
+        {
+            cin.ignore();
+            cout << "Please re-enter your move" << endl;
+            cin >> p1move;
+        }
+
         if(p1move == "ATTACK")
         {
             switch(player1[1])
@@ -326,9 +381,6 @@ cout << R"(
                 srand(time(0));
                 dodgechance1 = rand() % 2 + 1;
                 break;
-            case 4:
-                dodgechance1 = 1;
-                break;
             }
             if(dodgechance1 == 1)
             {
@@ -346,7 +398,7 @@ cout << R"(
                 srand(time(0));
                 int num3 = rand() % 10 + 1;
                 dmg-=num3;
-                if(silver2) dmg/2;
+                if(silver2) dmg = dmg/2;
                 cout << p1class << " strikes their opponent dealing " << dmg << "HP!" << endl;
                 player2[0] -= dmg;
                 cin.ignore();
@@ -434,9 +486,9 @@ cout << R"(
                     sleep(3);
                     break;
                 case 5:
-                    player1[2]++;
-                    cout << "You envelop your opponent in your grappling hook, as they struggle to move you may now land free hits on them. Your opponent cannot hit you." << endl;
-                    spturns1 = -1;
+                    grapple1 = true;
+                    cout << "You envelop your opponent in your grappling hook, as they struggle to move you may now land free hits on them. Your opponent skips a turn." << endl;
+                    spturns1 = 0;
                     spcd1 = 5;
                     cin.ignore();
                     sleep(3);
@@ -467,7 +519,7 @@ cout << R"(
                     break;
                 }
             }
-        }
+        }}
 
 
         if (player1[0] < 0 || player2[0] < 0)
@@ -483,36 +535,59 @@ cout << R"(
 
         if( spturns2 == 2 )
         {
-            switch(sp1)
+            switch(sp2)
             {
             case 1:
+                cout << "The White Flames, once on your sword, fade. Your damage output is back to normal." << endl;
+                cout << endl;
                 player2[1]--;
                 break;
             case 2:
+                cout << "The curse lifts off of your opponent. Your damage output is back to normal." << endl;
+                cout << endl;
                 player2[1]--;
                 break;
             case 3:
+                cout << "Your opponent fights off the shriekers and is able to focus on the battle at hand. Your opponent's agility is back to normal." << endl;
+                cout << endl;
                 player2[2]--;
                 break;
             case 4:
                 player2[2]--;
+                cout << "Your opponent comes to their senses and their thoughts are back to normal. Your opponent's agility is back to normal." << endl;
+                cout << endl;
                 break;
             case 5:
-                player2[2]--;
+                grapple2 = false;
+                cout << "Your opponent breaks out of the ropes and may fight again. Your opponent may no longer skip turns." << endl;
+                cout << endl;
                 break;
             case 6:
-                player2[3]++;
+                player1[3]++;
+                cout << "Your opponent stopped the bleeding. Your opponent may use potions to regain more health." << endl;
+                cout << endl;
                 break;
             case 7:
-                silver1 = false;
+                silver2 = false;
+                cout << "The silver vanishes from your armor. You take the same ammount of damage as you did." << endl;
+                cout << endl;
                 break;
             case 8:
                 player2[2]--;
+                cout << "You remember that you left the stove on! Your agility is back to normal." << endl;
+                cout << endl;
                 break;
             }
         }
         if(spcd2 < 0) spcd2 = 0;
         system("cls");
+        if(grapple1)
+        {
+            cout << "You're enveloped in the opponent's grapple! You skip this turn" << endl;
+            sleep(4);
+            system("cls");
+        }
+        else{
         cout << p2class << " makes their move!" << endl;
         cout << p2class << " max HP: " << maxhp2 << endl;
         cout << p2class << " current HP: " << player2[0] << endl;
@@ -520,6 +595,12 @@ cout << R"(
         cout << "SPECIAL COOLDOWN: " << spcd2 << " turns." << endl;
         cout << "ATTACK            HEAL            SPECIAL" << endl;
         cin >> p2move;
+        while(p2move != "ATTACK" || p2move != "HEAL" || p2move != "SPECIAL")
+        {
+            cin.ignore();
+            cout << "Please re-enter your move" << endl;
+            cin >> p2move;
+        }
         if(p2move == "ATTACK")
         {
             switch(player2[1])
@@ -571,7 +652,7 @@ cout << R"(
                 srand(time(0));
                 int num4 = rand() % 10 + 1;
                 dmg-=num4;
-                if(silver1) dmg/2;
+                if(silver1) dmg = dmg/2;
                 cout << p2class << " strikes their opponent dealing " << dmg << "HP!" << endl;
                 player1[0] -= dmg;
                 cin.ignore();
@@ -659,9 +740,9 @@ cout << R"(
                     sleep(3);
                     break;
                 case 5:
-                    player2[2]++;
-                    cout << "You envelop your opponent in your grappling hook, as they struggle to move you may now land free hits on them. Your opponent cannot hit you." << endl;
-                    spturns2 = -1;
+                    grapple2 = true;
+                    cout << "You envelop your opponent in your grappling hook, as they struggle to move you may now land free hits on them. Your opponent skips a turn." << endl;
+                    spturns2 = 0;
                     spcd2 = 5;
                     cin.ignore();
                     sleep(3);
@@ -692,7 +773,7 @@ cout << R"(
                     break;
                 }
             }
-        }
+        }}
     }
         spturns2++;
         spcd2--;
@@ -702,14 +783,40 @@ cout << R"(
             gameOver = true;
         }
     }
-    PlaySound(TEXT("fallen down.wav"),NULL,SND_FILENAME | SND_ASYNC | SND_LOOP);
-    if(player1[0] < 0)
+    system("cls");
+    srand(time(0));
+    int num6 = rand() % 4 + 1;
+    switch(num6)
+    {
+    case 1:
+        PlaySound(TEXT("ending.wav"),NULL,SND_FILENAME | SND_ASYNC | SND_LOOP);
+        break;
+    case 2:
+        PlaySound(TEXT("An Ending.wav"),NULL,SND_FILENAME | SND_ASYNC | SND_LOOP);
+        break;
+    case 3:
+        PlaySound(TEXT("once upon a time.wav"),NULL,SND_FILENAME | SND_ASYNC | SND_LOOP);
+        break;
+    case 4:
+        PlaySound(TEXT("Home.wav"),NULL,SND_FILENAME | SND_ASYNC | SND_LOOP);
+        break;
+    }
+
+    if(player1[0] >= 0)
     {
         if(faction1 == "orderly") cout << p1class << " has been slain in battle by the likes of the " << p2class << ". Tragic loss for all of Gaia as they have lost a true warrior..." << endl;
         if(faction1 == "chaotic") cout << p1class << " has at last fallen. No more will they terrorise Gaia. May peace live on." << endl;
         if(faction1 == "neutral") cout << "Is this... peace..?" << endl;
     }
-    if(player2[0] > 0)
+<<<<<<< HEAD
+<<<<<<< HEAD
+    if(player2[0] <= 0)
+=======
+    if(player1[0] > 0)
+>>>>>>> ba6780beb068ac154513f0a17ee26af6b7d4488c
+=======
+    if(player1[0] > 0)
+>>>>>>> ba6780beb068ac154513f0a17ee26af6b7d4488c
     {
         if(faction1 == "orderly") cout << "The Great " << p1class << " has saved Gaia once again from the likes of " << p2class << ". May news of this Hero spread all over these beautiful lands." << endl;
         if(faction1 == "chaotic") cout << "Stronger and more bloodthirsty than ever " << p1class << " is looking for another fight to finally bring all of Gaia to their KNEES!" << endl;
