@@ -240,7 +240,7 @@ cout << R"(
     system("cls");
 
     srand(time(0));
-    int num2 = rand() % 9 + 1;
+    int num2 = rand() % 10 + 1;
     switch(num2)
     {
     case 1:
@@ -270,6 +270,8 @@ cout << R"(
     case 9:
         PlaySound(TEXT("Last Surprise.wav"),NULL,SND_FILENAME | SND_ASYNC | SND_LOOP);
         break;
+    case 10:
+        PlaySound(TEXT("spider dance.wav"),NULL,SND_FILENAME | SND_ASYNC | SND_LOOP);
     }
     maxhp1 = player1[0];
     maxhp2 = player2[0];
@@ -343,12 +345,12 @@ cout << R"(
         cout << "SPECIAL COOLDOWN: " << spcd1 << " turns." << endl;
         cout << "ATTACK            HEAL            SPECIAL" << endl;
         cin >> p1move;
-        while(p1move != "ATTACK" || p1move != "HEAL" || p1move != "SPECIAL")
+       /* while(p1move != "ATTACK" || p1move != "HEAL" || p1move != "SPECIAL")
         {
             cin.ignore();
             cout << "Please re-enter your move" << endl;
             cin >> p1move;
-        }
+        }*/
 
         if(p1move == "ATTACK")
         {
@@ -595,12 +597,12 @@ cout << R"(
         cout << "SPECIAL COOLDOWN: " << spcd2 << " turns." << endl;
         cout << "ATTACK            HEAL            SPECIAL" << endl;
         cin >> p2move;
-        while(p2move != "ATTACK" || p2move != "HEAL" || p2move != "SPECIAL")
+        /*while(p2move != "ATTACK" || p2move != "HEAL" || p2move != "SPECIAL")
         {
             cin.ignore();
             cout << "Please re-enter your move" << endl;
             cin >> p2move;
-        }
+        }*/
         if(p2move == "ATTACK")
         {
             switch(player2[1])
@@ -784,8 +786,9 @@ cout << R"(
         }
     }
     system("cls");
+
     srand(time(0));
-    int num6 = rand() % 4 + 1;
+    int num6 = rand() % 6 + 1;
     switch(num6)
     {
     case 1:
@@ -802,17 +805,19 @@ cout << R"(
         break;
     }
 
-    if(player1[0] >= 0)
+    if(player2[0] > player1[0])
     {
         if(faction1 == "orderly") cout << p1class << " has been slain in battle by the likes of the " << p2class << ". Tragic loss for all of Gaia as they have lost a true warrior..." << endl;
         if(faction1 == "chaotic") cout << p1class << " has at last fallen. No more will they terrorise Gaia. May peace live on." << endl;
         if(faction1 == "neutral") cout << "Is this... peace..?" << endl;
+        sleep(1000000000000);
     }
-    if(player2[0] <= 0)
+    if(player1[0] > player2[0])
     {
         if(faction1 == "orderly") cout << "The Great " << p1class << " has saved Gaia once again from the likes of " << p2class << ". May news of this Hero spread all over these beautiful lands." << endl;
         if(faction1 == "chaotic") cout << "Stronger and more bloodthirsty than ever " << p1class << " is looking for another fight to finally bring all of Gaia to their KNEES!" << endl;
         if(faction1 == "neutral") cout << "The Ronin, sheathing their blade covered in blood, looks up at the sun setting, reminiscing of how far they've come... but mostly they want to go out for a drink, about DAMN TIME. Oh, and I guess You saved the world, good job, well done You." << endl;
+        sleep(100000000000);
     }
     return 0;
 }
